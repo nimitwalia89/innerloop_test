@@ -25,6 +25,16 @@
               </md-chip-template>
             </md-chips> -->
             <skills ng-model="vm.selectedSkills" skills-list="vm.skills"></skills>
+            
+            <md-list>
+              <md-subheader class="md-no-sticky">Your skills</md-subheader>
+              <md-list-item ng-repeat="skill in vm.selectedSkills">
+                <b> {{ skill.name }} </b>
+                <span style="margin-left:20px"> ({{ skill.type }}) </span>
+              
+              </md-list-item>
+              <md-divider></md-divider>
+
         </div>
         </div>
     </md-content>
