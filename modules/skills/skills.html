@@ -1,0 +1,33 @@
+<!-- <div oc-lazy-load="helpDesk.dashboard">  -->
+    <div ng-controller="skillsController as vm" flex="100">
+	
+    <md-content flex layout-padding>
+      <div layout="column" layout-fill layout-align="top center">
+        <h1>Skills</h1>
+        <div class="white-bg md-whiteframe-4dp skill_container">
+            <!-- <md-chips ng-model="vm.selectedSkills" md-autocomplete-snap
+              md-transform-chip="vm.transformChip($chip)"
+              md-on-add="vm.updateSkills()"
+              md-require-match="vm.autocompleteDemoRequireMatch">
+              <md-autocomplete
+                  md-selected-item="vm.selectedItem"
+                  md-search-text="vm.searchText"
+                  md-items="item in vm.querySearch(vm.searchText)"
+                  md-item-text="item.name"
+                  placeholder="Add Skills">
+                <span md-highlight-text="vm.searchText">{{item.name}} :: {{item.type}}</span>
+              </md-autocomplete>
+              <md-chip-template>
+                <span>
+                  <strong>{{$chip.name}}</strong>
+                  <em>({{$chip.type}})</em>
+                </span>
+              </md-chip-template>
+            </md-chips> -->
+            <skills ng-model="vm.selectedSkills" skills-list="vm.skills"></skills>
+        </div>
+        </div>
+    </md-content>
+  </section>
+</div>
+<!-- </div> -->

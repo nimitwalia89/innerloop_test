@@ -1,0 +1,39 @@
+<div ng-controller="MenuController as vm">
+<md-toolbar class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" hide-gt-md aria-label="Settings" ng-click="vm.toggleSideNav()">
+          <md-icon md-font-set="material-icons"> menu </md-icon>
+        </md-button>
+        <h2>
+          <span>INNERLOOP</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="vm.logout()" aria-label="Close dialog">
+        <md-tooltip>Logout</md-tooltip>
+                    <md-icon md-font-set="material-icons"> power_settings_new </md-icon>
+        </md-button>
+      </div>
+</md-toolbar>
+<section layout="row" flex style="height:100%" >
+
+    <md-sidenav
+        class="md-sidenav-left"
+        md-component-id="left"
+        md-is-locked-open="$mdMedia('gt-md')"
+        md-disable-backdrop
+        md-whiteframe="4">
+      <md-content layout-padding>
+        <md-button ng-click="vm.toggleSideNav()" class="md-primary" hide-gt-md>
+          Close
+        </md-button>
+        <md-list-item class="secondary-button-padding" ui-sref="app.dashboard">
+          <p>Dashboard</p>
+        </md-list-item>
+        <md-list-item class="secondary-button-padding" ui-sref="app.skills">
+          <p>Skills</p>
+        </md-list-item>
+      </md-content>
+    </md-sidenav>
+
+    <div ui-view="dashboard" autoscroll="false" layout="row" flex="100"></div>
+    </div>

@@ -1,0 +1,19 @@
+<md-chips ng-model="selectedSkills" md-autocomplete-snap
+              md-transform-chip="transformChip($chip)"
+              md-on-add="updateSkills()"
+              md-require-match="autocompleteDemoRequireMatch">
+              <md-autocomplete
+                  md-selected-item="selectedItem"
+                  md-search-text="searchText"
+                  md-items="item in querySearch(searchText)"
+                  md-item-text="item.name"
+                  placeholder="Add Skills">
+                <span md-highlight-text="searchText">{{item.name}} :: {{item.type}}</span>
+              </md-autocomplete>
+              <md-chip-template>
+                <span>
+                  <strong>{{$chip.name}}</strong>
+                  <em>({{$chip.type}})</em>
+                </span>
+              </md-chip-template>
+            </md-chips>

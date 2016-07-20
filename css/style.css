@@ -1,0 +1,19 @@
+body{
+	background-color: #f6f6f6;
+}
+.fill-height{
+  min-height: 100%;
+}
+
+.fill-height > div{
+  min-height: 100%;
+}
+md-list-item.md-3-line, md-list-item.md-3-line>.md-no-style{
+	min-height: 1px;
+}
+md-toast{
+	position:fixed !important;
+}
+.skill_container{
+	min-width:100% !important;
+}
